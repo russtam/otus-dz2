@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: otus-dz-2
+
+
+management:
+  endpoints:
+    web:
+      base-path: ""
+
+server:
+  port: 8000
