@@ -6,5 +6,5 @@ COPY src/ src/
 RUN mvn package
 FROM amd64/eclipse-temurin:21-jre-noble
 COPY --from=build /app/target/otus-dz-2-*.jar /app.jar
-EXPOSE 8080
+EXPOSE 8000
 CMD ["java", "-jar", "/app.jar"]
