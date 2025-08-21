@@ -1,7 +1,11 @@
+appCfgPath: ${APP_CONFIG_PATH:/config}
+
 spring:
   application:
     name: otus-dz-2
-
+  config:
+    import:
+      - file:${appCfgPath}/db.yaml
 
 management:
   endpoints:
@@ -9,4 +13,4 @@ management:
       base-path: ""
 
 server:
-  port: 8000
+  port: ${APP_HTTP_PORT:8000}
