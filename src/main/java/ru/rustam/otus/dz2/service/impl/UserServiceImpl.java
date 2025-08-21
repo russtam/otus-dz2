@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import ru.rustam.otus.dz2.db.UserEntity;
 import ru.rustam.otus.dz2.db.UserRepository;
 import ru.rustam.otus.dz2.exceptions.UserNotFoundException;
+import ru.rustam.otus.dz2.models.UserDto;
 import ru.rustam.otus.dz2.service.UserService;
 
 import java.util.Optional;
@@ -19,8 +20,8 @@ public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
 
     @Override
-    public void createUser(UserEntity user) {
-        userRepository.save(user);
+    public UserEntity createUser(UserEntity user) {
+        return userRepository.save(user);
     }
 
     @Override

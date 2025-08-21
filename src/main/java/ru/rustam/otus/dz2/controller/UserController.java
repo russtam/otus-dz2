@@ -16,9 +16,9 @@ public class UserController {
     private final UserService userService;
 
     @PostMapping("/user")
-    public ResponseEntity<Void> createUser(@RequestBody UserDto user) {
-        userService.createUser(UserUtil.convert(user));
-        return ResponseEntity.noContent().build();
+    public ResponseEntity<UserDto> createUser(@RequestBody UserDto user) {
+        var savedEntity = userService.createUser(UserUtil.convert(user));
+        return ResponseEntity.ok(UserUtil.convert(savedEntity));
     }
 
     @GetMapping("/user/{userId}")
