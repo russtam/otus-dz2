@@ -8,9 +8,13 @@ spring:
       - file:${appCfgPath}/db.yaml
 
 management:
+  endpoint:
+    health:
+      show-details: always
   endpoints:
     web:
-      base-path: ""
+      exposure:
+        include: "*"
 
 server:
   port: ${APP_HTTP_PORT:8000}
