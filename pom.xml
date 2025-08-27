@@ -10,7 +10,7 @@
     </parent>
     <groupId>ru.rustam.otus</groupId>
     <artifactId>otus-dz-2</artifactId>
-    <version>0.0.7-SNAPSHOT</version>
+    <version>0.0.8-SNAPSHOT</version>
     <name>otus-dz-2</name>
     <description>Home task for OTUS</description>
 

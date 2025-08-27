@@ -15,6 +15,13 @@ management:
     web:
       exposure:
         include: "*"
+  metrics:
+    distribution:
+      slo:
+        http.server.requests: 10ms, 50ms, 100ms, 200ms, 300ms, 400ms, 500ms, 600ms, 800ms
+    export:
+      prometheus:
+        enabled: true
 
 server:
   port: ${APP_HTTP_PORT:8000}
